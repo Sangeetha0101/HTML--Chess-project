@@ -1,0 +1,15 @@
+<html lang="en">
+<head></head>
+<title>SVG></title>
+    <body>
+        <div>
+            <h2>SVG</h2>
+            <svg width="400" height="600" viewport="0 0 400 400">
+                <circle cx="400",cy="400",cr="30" stroke="Red" stroke-width="10"></circle>
+                <line x1="100" y1="150"x2="150" y2="200" stroke="blue" stroke-width="15"></line>
+
+
+
+
+            </SVG>
+    </body>
