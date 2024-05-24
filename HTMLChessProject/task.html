@@ -1,1 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task</title>
+    <style>
+      body{
+            padding:25px;
+            margin:10px;
+            text-decoration: solid;
+            text-align: center;
+        }
+    </style>
+   
+</head>
+<body>
+    <h3><u>1.Check Whether Given Number is Positive or Negative</u></h3>
+    <input type="text" id="numberInput1" placeholder="Enter a number">
+    <button onclick="checkNumber()">Check</button>
+    <p id="resultp"></p>
 
+    <script>
+        function checkNumber() {
+            
+            var number = document.getElementById("numberInput1").value;
+            number = parseFloat(number);
+             if (number > 0) {
+                document.getElementById("resultp").innerText = "The number is positive.";
+            } else if (number < 0) {
+                document.getElementById("resultp").innerText = "The number is negative.";
+            } 
+             
+    
+        }
+    </script>
+    <div>
+        <h3><u>2.Greatest Between Given Number</u> </h3>
+        <div>
+            <input type="text" id="1stNumberInput" placeholder="Enter a 1st number">
+            <input type="text" id="2ndNumberInput" placeholder="Enter a 2nd number">
+            <button onclick="Compare()">Comparison</button>
+    <p id="Op"></p>
+    </div>
+    </div>
+    <script>
+        function Compare(){   
+            var number1 = document.getElementById("1stNumberInput").value;
+            number1= parseFloat(number1);
+
+            var number2 = document.getElementById("2ndNumberInput").value;
+            number2 = parseFloat(number2);
+
+
+             if (number1 > number2) {
+                document.getElementById("Op").innerText = "Number 1 is Greater than Number 2.";
+            } 
+            else if(number2>number1)
+             {
+                document.getElementById("Op").innerText = "Number 2 is Greater than Number 1.";
+            } 
+              }
+  </script>
+  <div>
+    <h3><u>Find the Smallest Among 3 Integers</u></h3>
+    <div>
+        <input type="text" id="1stNumber" placeholder="Enter a 1st number">
+        <input type="text" id="2ndNumber" placeholder="Enter a 2nd number">
+        <input type="text" id="3rdNumber" placeholder="Enter a 3rd number">
+        <button onclick="Click_me()">Click Me</button>
+        <p id="result3"></p>
+    </div>
+    <script>
+        function Click_me() {
+            var integer1 = parseFloat(document.getElementById("1stNumber").value);
+            var integer2 = parseFloat(document.getElementById("2ndNumber").value);
+            var integer3 = parseFloat(document.getElementById("3rdNumber").value);
+    
+            if (integer1 <= integer2 && integer1 <= integer3) {
+                document.getElementById("result3").innerText = "1st Number is smallest among other two Numbers";
+            } else if (integer2 <= integer1 && integer2 <= integer3) {
+                document.getElementById("result3").innerText = "2nd Number is smallest among other two Numbers";
+            } else if (integer3 <= integer1 && integer3 <= integer2) {
+                document.getElementById("result3").innerText = "3rd Number is smallest among other two Numbers";
+            }
+        }
+    </script>
+    <div>
+        <h3><u>Find the Given Number Odd or Even</u></h3>
+        <div>
+            <input type="number" id="int" placeholder="Enter a number">
+            <button onclick="Find_Me()">Click Me</button>
+            <p id="result4"></p>
+        </div>
+    </div>  
+    <script>
+    function Find_Me()
+    {
+        var num = parseFloat(document.getElementById("int").value);
+        if((num=num%2)==0)
+        {
+            document.getElementById("result4").innerText="Given Number is Even";
+            
+    }   else if((num=num%2)==1)
+    {
+        document.getElementById("result4").innerText="Given Number is Odd";
+    }
+}
+    </script>
+    <div>
+        <h3><u>Full number Name</u></h3>
+        <div>
+            <input type="number" id="form" placeholder="Enter the number between 1 to 5">
+            <button onclick="Fill_Name()" >click me</button>
+          <p id="result5"></p>
+        </div>
+    </div>
+    <script>
+        function Fill_Name(){
+            var name=parseFloat(document.getElementById("form").value);
+            if (name>5){
+                document.getElementById("result5").innerText="Kindly enter number between 1-5";
+            }
+            else if(name==1)
+            {
+                document.getElementById("result5").innerText="1-One";
+            }
+             else if(name==2)
+             {
+                document.getElementById("result5").innerText="2-Two";
+            }
+             else if(name==3)
+            {
+                document.getElementById("result5").innerText="3-Three";
+            }
+             else if(name==4)
+            {
+                document.getElementById("result5").innerText="4-Four";
+            }
+             else if(name=5)
+            {
+                document.getElementById("result5").innerText="5-Five";
+            }
+        }
+    </script>
+
+    <div><h3><u>14/05/24:tasks</u></h3>
+        <div>
+            <h3><u>10% Discount Sale For Above  2000 bill</u></h3>
+            <label for="billAmount">Enter Bill Amount (in Rs.):</label>
+            <input type="number" id="billAmount" required>
+            <button onclick="calculateBill()">Calculate</button>
+            <p id="finalBill"></p>
+
+<script>
+        function calculateBill() {
+           
+            let Amount = parseFloat(document.getElementById('billAmount').value);
+
+            if (Amount > 2000) {
+                Amount= Amount-(Amount * 0.10);
+            }
+
+            document.getElementById('finalBill').innerText = 'Final Bill Amount: Rs. ' + Amount.toFixed(2);
+        }
+</script>
+<div>
+    <h3><u>Hike based on Experience and salary</u></h3>
+    <div>
+        <label for="Experience">Total Experience in Years:</label>
+        <input type="number" id="Exp" required>
+        <label for="Salary">Salary Per month:</label>
+        <input type="number" id="Sal" required>
+        <checkbox onclick="salaryHike()">ClickMe</button>
+        <p id="reversed_salary"></p>
+</div>
+<script>
+function salaryHike(){
+    let hiked_sal;
+    let experience=parseFloat(document.getElementById("Exp").value);
+    let salary=parseFloat(document.getElementById("Sal").value);
+    if(experience>3 && salary<30000){
+        hiked_sal=salary+(salary*0.30);
+      
+    }
+    document.getElementById('reversed_salary').innerText='Congrats Your Reversed Salary is '+ hiked_sal;
+}
+</script>
+</div>
+<div>
+    <h3><u>Payment mode</u></h3>
+    <div>
+        <label for="Bill Amount">Enter Bill Amount in Rs.</label>
+        <input type="number"id=amount required>
+        <label for ="paymentmode">Select Payment Mode</label>
+        
+        <input type="radio"  id="Payment_Mode" value="Card" />Card
+        <input type="radio"  id="Payment_Modes" value="Cash" />Cash
+        <button onclick="FinalBill()">Click Me</button>
+        <p id="Final Bill"></p>
+            </div>
+            <div>
+                <script>
+                    function FinalBill()
+                    {
+                        let Mode=(document.getElementById("Payment_Mode").value);
+                        let amount=parseFloat(document.getElementById("amount").value);
+                    }
+
+                </script>
+            </div>
+            <div>
+                <h3><u>Reverse Number</u></h3></div>
+                <div>
+                    <label for="twoDigitNumber">Enter a 2-digit number:</label>
+                    <input type="number" id="twoDigitNumber" name="twoDigitNumber" min="10" max="99" required>
+                    <button onclick="reverseNumber()">Submit</button>
+                    <p id="integer"></p>
+                </div>
+            <script>
+                function reverseNumber() {
+                    let num = document.getElementById('twoDigitNumber').value;
+                    if (num.length === 2 && num >= 10 && num <= 99) {
+                        let reversedNum = num.split('').reverse().join('');
+                        document.getElementById('integer').innerText = `Reversed Number: ${reversedNum}`;
+                    } else {
+                        document.getElementById('integer').innerText = 'Please enter a valid 2-digit number.';
+                    }
+                }
+  
+</script></div>
+               <div>
+                    <h3>Enter your score:</h3>
+    <input type="number" id="score" placeholder="Enter your score (0-100)">
+    <button onclick="calculateGrade()">Calculate Grade</button>
+    <p id="resultg"></p>
+
+    <script>
+        function calculateGrade() {
+          const scoreInput = document.getElementById('score');
+          const score = parseInt(scoreInput.value);
+          const resultElement = document.getElementById('resultg');
+
+          if (score >= 90 && score <= 100) {
+            resultElement.textContent = `Your score is ${score} and your grade is A.`;
+          } else if (score >= 80 && score < 90) {
+            resultElement.textContent = `Your score is ${score} and your grade is B.`;
+          } else if (score >= 70 && score < 80) {
+            resultElement.textContent = `Your score is ${score} and your grade is C.`;
+          } else if (score >= 60 && score < 70) {
+            resultElement.textContent = `Your score is ${score} and your grade is D.`;
+          } else if (score >= 50 && score < 60) {
+            resultElement.textContent = `Your score is ${score} and your grade is E.`;
+          } 
+          else if (score >= 10 && score < 40) {
+            resultElement.textContent = `Your score is ${score} and your grade is F.`;}
+            else {
+            resultElement.textContent = "Invalid score. Please enter a number between 0 and 100.";
+          }
+        }
+    </script>
+                </div>
+                <div>
+
+                <h3>Sum of Digits to Single Digit</h3>
+                <input type="number" id="numberInput" placeholder="Enter a 3-digit number" min="100" max="999">
+                <button onclick="sumDigits()">Sum Digits</button>
+                <p id="result3d"></p>
+            
+                <script>
+                function sumDigits() {
+                    const input = document.getElementById('numberInput').value;
+                    const number = parseInt(input, 10);
+                
+                    if (number < 100 || number > 999) {
+                        document.getElementById('result3d').innerText = "Please enter a valid 3-digit number.";
+                        return;
+                    }
+                
+                    let sum = number;
+                
+                    while (sum >= 10) {
+                        sum = sumDigitOnce(sum);
+                    }
+                
+                    document.getElementById('result3d').innerText = `Single Digit Sum: ${sum}`;
+                }
+                
+                function sumDigitOnce(num) {
+                    let sum = 0;
+                    while (num > 0) {
+                        sum += num % 10;
+                        num = Math.floor(num / 10);
+                    }
+                    return sum;
+                }
+                </script>
+            </body>
+            </html>
+            
