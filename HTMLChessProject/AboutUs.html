@@ -4,164 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Purple Chess Academy</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <style>
-        
         header {
-            background-color:whitesmoke;
-            color: #fff;
-            padding: -200px;
+            background-color: whitesmoke;
+            padding: 20px;
             text-align: center;
-            font-size: xx-large;
+            font-size: 2rem;
             color: rgb(0, 0, 0);
         }
+        
+        header img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        
         nav ul {
-            list-style-type: none; 
-            padding: 0; 
-            margin: 0; 
-            background-color: hsla(144, 45%, 98%, 0.982); 
-            overflow: hidden; /* Ensure content doesn't overflow */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #f8f9fa;
             text-align: center;
         }
 
         nav li {
-            display: inline-block; /* Float list items to create horizontal layout */
-            text-align: center;
-        }
-        nav li a {
-            display: block; /* Make anchor tags display as block for styling */
-            color: #b806eaee; 
-            text-align: center; 
-            padding: 14px 16px; 
-            text-decoration: none; 
+            display: inline-block;
         }
 
-         
-        nav li a:hover  {
-            background-color: black;
-            padding: 10-px;
-            text-align: left;
-            color: rgb(146, 12, 190);
-        }
-        .dropdown {
-            position: relative;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        .dropdown:hover .dropdown-content {
+        nav li a {
             display: block;
-        }
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
+            color: #b806ea;
+            padding: 14px 16px;
             text-decoration: none;
-            display: block;
+            transition: background-color 0.3s ease-in-out;
         }
-        .dropdown-content a:hover {
-            background-color: #ddd;
+
+        nav li a:hover {
+            background-color: #343a40;
+            color: white;
         }
+
         main {
             padding: 20px;
         }
 
         footer {
-            
-            background-image: linear-gradient(to right, #ffcbff, #c1d2c1, #a48ade, #e52e71);
-            background-color:greenyellow;
-            color: #0a0a0a;
+            background-color: #343a40;
+            color: white;
             padding: 20px;
             text-align: center;
-            border: width 2px;
         }
+
+        footer h3 {
+            margin-top: 0;
+            color: #ffc107;
+        }
+
         footer ul {
-            list-style-type: none; 
-            padding: 0; 
-            margin: 0; 
-            background-color: hsla(144, 45%, 98%, 0.982); 
-            overflow: hidden; /* Ensure content doesn't overflow */
+            list-style-type: none;
+            padding: 0;
             text-align: center;
         }
 
         footer li {
-            display: inline-block; /* Float list items to create horizontal layout */
-            text-align: center;
+            display: inline-block;
         }
 
         footer li a {
-            display: block; 
-            color: #b806eaee; 
-            text-align: center; 
-            padding: 14px 16px; 
-            text-decoration: none; 
+            color: #ffc107;
+            padding: 0 10px;
+            text-decoration: none;
         }
-        
-        
+
+        footer li a:hover {
+            color: white;
+        }
+
+        .program-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .program-list li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            color: purple;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <img src="asserts/knight (2).png" alt="logo" ><br>
-        <B><span style="color: purple;" >Black Purple Chess Academy</B>
+    <header class="container-fluid">
+        <img src="asserts/knight.png" alt="logo">
+        <h1><span class="highlight">Black Purple Chess Academy</span></h1>
     </header>
 
-    <nav>
-        <ul>
-            
-            <li><a href="#">🐴Home</a></li>
-            <li><a href="#">&#x1F4B2;Fees</a></li>
-            <li><a href="./Contact_US.html">&#128222;Contact Us</a></li>
-            <li><a href="./Feedback.html">&#128221;Feedback and Support</b></a></li>
-            <li><a href="./Registration.html">&#x2971;Sign-Up</a></li>
-            <li><a href="./Login.html">&#xf2bd;Log-In</a></li>
+    <nav class="container-fluid">
+        <ul class="nav justify-content-center">
+            <li class="nav-item"><a href="#" class="nav-link">🐴 Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">&#x1F4B2; Fees</a></li>
+            <li class="nav-item"><a href="./Contact_US.html" class="nav-link">&#128222; Contact Us</a></li>
+            <li class="nav-item"><a href="./Feedback.html" class="nav-link">&#128221; Feedback & Support</a></li>
+            <li class="nav-item"><a href="./Registration.html" class="nav-link">&#x2971; Sign-Up</a></li>
+            <li class="nav-item"><a href="./Login.html" class="nav-link">&#xf2bd; Log-In</a></li>
         </ul>
     </nav>
-    
-    </nav>
 
-    <main>
-                <p><h1>About Us</h1>
+    <main class="container">
+        <h1>About Us</h1>
+        <p>
             <b><i>Welcome to Black Purple Chess Academy</i></b>, your premier destination for comprehensive chess education and training. Founded in 2021, we are dedicated to nurturing a passion for chess and empowering students of all ages and skill levels to reach their full potential.
-                
-                <h2><b><u>Our Mission</u></b></h2>
-                 At <b> Black Purple Chess Academy </b>, our mission is to promote the love of chess and foster a supportive learning environment where students can develop critical thinking skills, enhance their strategic abilities, and build confidence both on and off the chessboard.
-                
-                 
-                <h2><u>Our Approach</u></h2>
-                We believe in a holistic approach to chess education that combines expert instruction, personalized guidance, and a love for the game. Our team of experienced chess coaches and instructors are passionate about sharing their knowledge and expertise with students, helping them unlock their innate talents and achieve their goals.
-                
-                <h2><b><u>What Sets Us Apart</u></b></h2>
-             <p>
-            <b>Experienced Coach:</b> Our team consists of professional chess masters and educators who bring years of experience and expertise to the table.<br>
-            <b>Personalized Instruction: </b> We understand that every student is unique, which is why we offer personalized instruction tailored to each individual's needs and learning style.<br>
-            <b>Comprehensive Curriculum: </b> Our curriculum covers all aspects of chess, from basic rules and fundamentals to advanced strategies and tournament preparation.<br>
-            <b>Supportive Community:</b> We foster a supportive and inclusive community where students can connect with like-minded individuals, participate in friendly competitions, and celebrate their achievements together.
-        
-            </p>
-               <h2><u>Our Programs</u></h2>
-                        <p>Whether you're a beginner looking to learn the basics or an advanced player striving to improve your game, we offer a range of programs and classes to suit your needs
-                            <h3><B><u><em>Packages</em></u></h3></b>
-                
-                                <ul>
-                                    <b><u> <li>Beginner's Training</u></b>:  Learn the rules of chess, basic tactics, and fundamental strategies to get started on your chess journey.<br></li>
-                               <b><u><li>Intermediate Training</u></b>: Build upon your existing knowledge and skills with more advanced lessons, including opening theory, middlegame strategies, and endgame techniques.</li>
-                                <u><b><li>Advanced Training</b></u>: Take your game to the next level with intensive training sessions, personalized coaching, and preparation for competitive play.</li><br><br>
-                            </p>
-                                </ul></p>
+        </p>
+
+        <h2><b><u>Our Mission</u></b></h2>
+        <p>
+            At <b>Black Purple Chess Academy</b>, our mission is to promote the love of chess and foster a supportive learning environment where students can develop critical thinking skills, enhance their strategic abilities, and build confidence both on and off the chessboard.
+        </p>
+
+        <h2><u>Our Approach</u></h2>
+        <p>
+            We believe in a holistic approach to chess education that combines expert instruction, personalized guidance, and a love for the game. Our team of experienced chess coaches and instructors are passionate about sharing their knowledge and expertise with students, helping them unlock their innate talents and achieve their goals.
+        </p>
+
+        <h2><b><u>What Sets Us Apart</u></b></h2>
+        <ul class="program-list">
+            <li><b>Experienced Coaches:</b> Our team consists of professional chess masters and educators with years of experience.</li>
+            <li><b>Personalized Instruction:</b> We offer personalized instruction tailored to each student's needs and learning style.</li>
+            <li><b>Comprehensive Curriculum:</b> We cover all aspects of chess, from basic rules to advanced strategies and tournament preparation.</li>
+            <li><b>Supportive Community:</b> We foster a welcoming community where students can connect, compete, and grow together.</li>
+        </ul>
+
+        <h2><u>Our Programs</u></h2>
+        <p>Whether you're a beginner or an advanced player, we offer a range of programs to suit your needs.</p>
+        <h3><b><u><em>Packages</em></u></b></h3>
+        <ul class="program-list">
+            <li><b>Beginner's Training:</b> Learn the rules, basic tactics, and strategies.</li>
+            <li><b>Intermediate Training:</b> Advanced lessons on opening theory, middlegame strategies, and endgame techniques.</li>
+            <li><b>Advanced Training:</b> Intensive sessions, personalized coaching, and tournament preparation.</li>
+        </ul>
     </main>
 
     <footer>
-        <p><b>Join the Black Purple Chess Academy family and embark on an exciting and rewarding chess journey. Contact us today to learn more about our programs and start your chess adventure!</p></b>
-       
-       <span><h3><U>Contact Us</U></h3>
-         <b>   &#128383;93445 14486</b><br>
-        <b> &#128231;BlackPurple.chessaccademy@gmail.com</span></b>
-
-
+        <h3>Join the Black Purple Chess Academy Family</h3>
+        <p>Embark on an exciting chess journey! Contact us today to learn more about our programs.</p>
+        <p><b>&#128383; 93445 14486 | &#128231; BlackPurple.chessacademy@gmail.com</b></p>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
